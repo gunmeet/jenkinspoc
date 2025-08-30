@@ -6,7 +6,7 @@ FROM --platform=$BUILDPLATFORM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 ARG configuration=Release
 WORKDIR /src
 COPY ["Product.csproj", "."]
-RUN dotnet restore "Product/Product.csproj"
+RUN dotnet restore "Product.csproj"
 COPY . .
 WORKDIR "/Product"
 RUN dotnet build "Product.csproj" -c $configuration -o /app/build
