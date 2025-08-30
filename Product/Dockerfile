@@ -8,7 +8,7 @@ WORKDIR /src
 COPY ["Product.csproj", "Product/"]
 RUN dotnet restore "Product/Product.csproj"
 COPY . .
-WORKDIR "/src/Product"
+WORKDIR "/Product"
 RUN dotnet build "Product.csproj" -c $configuration -o /app/build
 
 FROM build AS publish
