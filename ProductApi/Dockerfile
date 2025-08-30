@@ -8,7 +8,7 @@ USER app
 FROM --platform=$BUILDPLATFORM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 ARG configuration=Release
 WORKDIR /src
-COPY ["ProductApi.csproj", "ProductApi/"]
+COPY ["ProductApi.csproj", "."]
 RUN dotnet restore "ProductApi/ProductApi.csproj"
 COPY . .
 WORKDIR "/ProductApi"
