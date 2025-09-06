@@ -35,3 +35,5 @@ dotnet publish ProductApi\ProductApi.csproj -c Release -o %WORKSPACE%\publish\Pr
 echo ==== Build Docker Images ====
 docker build -t product:latest ./Product
 docker build -t productApi:latest ./ProductApi
+
+9e7d0c053266463ab792b1dfb2de20fb 
